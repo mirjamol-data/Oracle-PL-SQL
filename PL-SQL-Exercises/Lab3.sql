@@ -1,9 +1,9 @@
 /*   EX1
-Create a program that displays the full name of the manager of a given employee id of 142 and the
+Create a program that displays the full name of the manager of a given employee id and the
 name of the department where the manager works. */
 
 DECLARE
-    v_emp_id EMPLOYEES.EMPLOYEE_ID%TYPE := 142;
+    v_emp_id EMPLOYEES.EMPLOYEE_ID%TYPE := 142;  --&v_emp_id -> asks the user to provide employee id
     v_man_id EMPLOYEES.MANAGER_ID%TYPE;
     v_first_name EMPLOYEES.FIRST_NAME%TYPE;
     v_last_name EMPLOYEES.FIRST_NAME%TYPE;
@@ -66,11 +66,11 @@ WHERE EMPLOYEE_ID IN (160,162);
 
 /*   EX3
 Create a program that calculates the years of experience for a given employee (based on
-his/her employee ID of 124), and raises his/her salary as follows: experience > 15: +25%; 15 >=
+their employee ID), and raises his/her salary as follows: experience > 15: +25%; 15 >=
 experience > 10: +15%; 10 >= experience > 5: +5%; else: +2%.*/
 
 DECLARE 
-    v_emp_id EMPLOYEES.EMPLOYEE_ID%TYPE := 124;
+    v_emp_id EMPLOYEES.EMPLOYEE_ID%TYPE := 124; --&v_emp_id -> asks the user to provide employee id
     v_experience NUMBER;
     v_raise NUMBER(3,2); -- 3 total digits, of which 2 are after the decimal point.
 
@@ -150,7 +150,7 @@ Create a program that displays the number of hired employees for each month in a
 
 
 DECLARE 
-    v_year NUMBER := 2005;
+    v_year NUMBER := 2005;  --&v_year
     v_count NUMBER;
 BEGIN 
     FOR i IN 1 .. 12 
