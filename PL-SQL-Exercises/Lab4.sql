@@ -1,4 +1,3 @@
-
 /* EX1
 Create a program that generates 100 random integers between 1 and 5 and then calculates
 the histogram of the values. Store the histogram in a variable-size array. */
